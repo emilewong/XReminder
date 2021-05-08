@@ -62,7 +62,7 @@ struct ReminderList: View {
                     } //: CONDITION
                 } //: HSTACK
             } //: VSTACK
-            .navigationBarTitle("Reminder")
+            .navigationBarTitle("Reminder - \(reminderManager.reminders.filter{ !$0.completed }.count) Item\(reminderManager.reminders.filter{!$0.completed}.count > 1 ? "s" : "")")
             .navigationBarItems(trailing: EditButton())
             
         } //: NAVIAGATION
